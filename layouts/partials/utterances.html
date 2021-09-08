@@ -1,0 +1,26 @@
+{{ if .Site.Params.utteranc.enable }}
+
+<!-- <script src="https://utteranc.es/client.js" 
+    repo="{{ .Site.Params.utteranc.repo }}" 
+    issue-term="{{ .Site.Params.utteranc.issueTerm }}"
+    crossorigin="anonymous" 
+    theme='$customStyle' 
+    async>
+</script> -->
+<div id="comment"></div>
+<script>
+    const utterances = document.createElement('script');
+    utterances.type = 'text/javascript';
+    utterances.async = true;
+    utterances.setAttribute('issue-term',"{{ .Site.Params.utteranc.issueTerm }}")
+    if(currentTheme() == 'light'){
+        utterances.setAttribute('theme','github-light')
+    }else {
+        utterances.setAttribute('theme','github-dark')
+    }
+    utterances.setAttribute('repo',"{{ .Site.Params.utteranc.repo }}")
+    utterances.crossorigin = 'anonymous';
+    utterances.src = 'https://utteranc.es/client.js';
+    window.document.getElementById('comment').appendChild(utterances);
+</script>
+{{ end }}
