@@ -14,6 +14,8 @@ function setTheme(style) {
     elem.classList.remove('isInitialToggle');
   });
   document.documentElement.setAttribute('data-color-mode', style);
+  // https://github.com/utterance/utterances/issues/549#issuecomment-907606127
+  // 修改 utteranc 无法跟随主题切换模式
   if (document.querySelector('.utterances-frame')) {
     const theme = document.documentElement.getAttribute('data-color-mode') === 'dark' ? 'github-dark' : 'github-light'
     const message = {
