@@ -67,14 +67,14 @@
                 {{ if or .PrevInSection .NextInSection }}
                   <div class="paginate-container" style="margin-right: 20px;margin-left: 20px;">
                     <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
-                      <li class="mr-3 mr-lg-0">
+                      <li class="mr-3 mr-lg-0" style="padding: 10px;">
                         <div>
                           {{ with .NextInSection }}
                             <a href="{{ .Permalink }}" class="btn btn-outline">上一篇<br>{{ .LinkTitle }}</a>
                           {{ end }}
                         </div>
                       </li>
-                      <li class="mr-3 mr-lg-0">
+                      <li class="mr-3 mr-lg-0" style="padding: 10px;">
                         <div>
                           {{ with .PrevInSection }}
                             <a href="{{ .Permalink }}" class="btn btn-outline ">下一篇<br>{{ .LinkTitle }}</a>

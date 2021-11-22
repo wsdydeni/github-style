@@ -33,7 +33,7 @@ pygmentsUseClasses = true
 
 [params.utteranc]
   enable = true
-  repo = "wsdydeni/wsdydeni.github.io" ##换成自己得
+  repo = "wsdydeni/blog-comment" ##换成自己得
   issueTerm = "url"
 
 [frontmatter]
