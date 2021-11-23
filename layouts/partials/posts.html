@@ -31,12 +31,14 @@
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
               </h3>
             </div>
-
+            
+            {{ if .Params.abstract }}
             <div>
               <div class="col-12 d-inline-block text-gray mb-2 pr-4">
-                {{ .Summary | safeHTML }}
+                {{ .Params.abstract }}
               </div>
             </div>
+            {{ end }}
 
             <div class="f6 text-gray mt-2">
               {{ with .Params.tags }}
@@ -52,12 +54,25 @@
               {{ end }}
               {{ end }}
 
-              Created
+              
+            </div>
+
+            <div class="f6 text-gray mt-2">
+              Created At
               <relative-time datetime="{{ .PublishDate.Format " Mon, 02 Jan 2006 15:04:05 -0700" }}" class="no-wrap"
                 title="{{ .PublishDate.Format " Mon, 02 Jan 2006 15:04:05 -0700" }}">
                 {{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}
               </relative-time>
+
+              {{ if .Site.Params.lastmod }}
+              <span class="file-info-divider"></span>
+                Last Update
+                <relative-time datetime="{{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}" class="no-wrap">
+                  {{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}
+                </relative-time>
+              {{ end }}
             </div>
+
           </div>
         </li>
         {{ end }}

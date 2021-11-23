@@ -1,8 +1,7 @@
 {{ $section := where .Site.RegularPages "Section" "in" (slice "post") }}
 {{ $section_count := len $section }}
 
-<div class="mt-4 position-sticky top-0 d-none d-md-block bg-white width-full border-bottom color-border-secondary"
-  style="z-index:3;">
+<div class="position-sticky top-0 d-none d-md-block bg-white width-full border-bottom color-border-secondary" style="z-index:3;">
   <div class="container-xl px-3 px-md-4 px-lg-5">
     <div class="gutter-condensed gutter-lg flex-column flex-md-row d-flex">
       <div class="flex-shrink-0 col-12 col-md-3 mb-4 mb-md-0">
@@ -30,7 +29,8 @@
               <span class="Counter">{{ $section_count}}</span>
             </a>
           </nav>
-          <div class="profile-color-modes js-promo-color-modes-banner-profile isInitialToggle">
+          
+          <!-- <div class="profile-color-modes js-promo-color-modes-banner-profile isInitialToggle">
             <svg width="106" height="60" viewBox="0 0 106 60" fill="none" stroke-width="3" stroke-linecap="round"
               stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
               <g class="profile-color-modes-illu-group profile-color-modes-illu-red">
@@ -143,7 +143,9 @@
                 </svg>
               </div>
             </span>
-          </div>
+          </div> -->
+
+
         </div>
       </div>
     </div>
